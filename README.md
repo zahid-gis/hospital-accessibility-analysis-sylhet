@@ -252,6 +252,16 @@ WGS 84 / UTM Zone 46N
 
 ## 📸 Project Outputs
 
+## Layout 1 — Hospital Accessibility Analysis
+
+![Hospital Accessibility Analysis](output/Layout_1_Hospital_Accessibility.png)
+
+---
+
+## Layout 2 — 500m Hospital Accessibility Focus
+
+![500m Hospital Accessibility](output/Layout_2_500m_Accessibility.png)
+
 
 
 - Hospital Accessibility Map
