@@ -254,7 +254,7 @@ WGS 84 / UTM Zone 46N
 
 ## Layout 1 — Hospital Accessibility Analysis
 
-![Hospital Accessibility Analysis]([output/Layout_1_Hospital_Accessibility.png](https://github.com/zahid-gis/hospital-accessibility-analysis-sylhet/blob/main/output/layout_1_hospital_accessibility.png))
+![Hospital Accessibility Analysis](https://github.com/zahid-gis/hospital-accessibility-analysis-sylhet/blob/main/output/layout_1_hospital_accessibility.png)
 
 ---
 
