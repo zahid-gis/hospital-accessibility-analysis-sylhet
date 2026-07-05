@@ -1,0 +1,146 @@
+# Methodology
+
+## Hospital Accessibility Analysis of Sylhet District, Bangladesh
+
+### 1. Study Area
+
+The study focuses on **Sylhet District, Bangladesh**, selected as the area of interest for evaluating healthcare accessibility. The district boundary was extracted from the national administrative boundary dataset to define the analysis extent.
+
+---
+
+### 2. Data Collection
+
+Two primary datasets were used in this project:
+
+* **Administrative Boundary:** GADM version 4.1
+* **Road Network and Hospital Locations:** OpenStreetMap (Geofabrik)
+
+These datasets were downloaded, verified, and imported into QGIS for spatial analysis.
+
+---
+
+### 3. Data Preparation
+
+The downloaded datasets were processed before analysis.
+
+The following preprocessing steps were performed:
+
+* Extracted the Sylhet District boundary from the national administrative boundary dataset.
+* Filtered hospital locations from the OpenStreetMap Points of Interest (POI) dataset using the **fclass = 'hospital'** attribute.
+* Clipped the road network and hospital datasets using the Sylhet District boundary to retain only features within the study area.
+* Reprojected all processed layers to **WGS 84 / UTM Zone 46N (EPSG:32646)** to ensure accurate distance-based analysis.
+
+---
+
+### 4. Buffer Analysis
+
+Hospital accessibility was evaluated using a buffer analysis approach.
+
+Three buffer zones were generated around each hospital:
+
+* **500 meters**
+* **1000 meters**
+* **2000 meters**
+
+These buffer distances represent different levels of potential accessibility to healthcare services.
+
+---
+
+### 5. Road Accessibility Analysis
+
+To assess transportation accessibility, the **Extract by Location** tool was used.
+
+Road segments intersecting each buffer zone were extracted separately for:
+
+* Roads within 500 m
+* Roads within 1000 m
+* Roads within 2000 m
+
+This analysis identifies the portions of the road network that fall within different accessibility distances from hospitals.
+
+---
+
+### 6. Cartographic Design
+
+Professional map layouts were designed in QGIS to effectively communicate the analysis results.
+
+The layouts include:
+
+* Hospital locations
+* Accessibility buffer zones
+* Accessible road network
+* District boundary
+* Legend
+* North arrow
+* Scale bar
+* Projection information
+* Data sources
+* Author information
+
+---
+
+### 7. Software and Coordinate Reference System
+
+**Software**
+
+* QGIS 3.x
+
+**Coordinate Reference System (CRS)**
+
+* EPSG:32646
+* WGS 84 / UTM Zone 46N
+
+Using a projected coordinate system ensured accurate distance measurements for buffer generation and accessibility analysis.
+
+---
+
+### 8. Workflow Summary
+
+```text
+Data Collection
+        │
+        ▼
+Administrative Boundary Extraction
+        │
+        ▼
+Hospital Extraction from OSM POI
+        │
+        ▼
+Road Network Preparation
+        │
+        ▼
+Clip to Sylhet District
+        │
+        ▼
+Reprojection to EPSG:32646
+        │
+        ▼
+500 m Buffer Creation
+        │
+        ▼
+1000 m Buffer Creation
+        │
+        ▼
+2000 m Buffer Creation
+        │
+        ▼
+Road Extraction Within Buffer Zones
+        │
+        ▼
+Cartographic Map Design
+```
+
+---
+
+## Tools Used
+
+| GIS Tool             | Purpose                             |
+| -------------------- | ----------------------------------- |
+| Select by Expression | Extract hospital locations          |
+| Clip                 | Limit datasets to Sylhet District   |
+| Reproject Layer      | Convert data to EPSG:32646          |
+| Buffer               | Create hospital accessibility zones |
+| Extract by Location  | Identify roads within buffer zones  |
+| Print Layout         | Create professional maps            |
+
+---
